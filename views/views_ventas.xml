@@ -1,0 +1,56 @@
+<odoo>
+  <data>
+
+    <!-- explicit list view definition -->
+    <record model="ir.ui.view" id="librosat_libroventa_tree">
+      <field name="name">librosat.libroventa.tree</field>
+      <field name="model">libros.libros_sat</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="fecha"/>
+          <field name="numeros"/>
+          <field name="partner_id" string="Cliente"/>
+          <field name="serie"/>
+          <field name="tipo"/>
+          <field name="base"/>
+          <field name="iva"/>
+          <field name="total"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- explicit from view definition -->
+    <record model="ir.ui.view" id="librosat_libroventa_form">
+      <field name="name">librosat.libroventa.form</field>
+      <field name="model">libros.libros_sat</field>
+      <field name="arch" type="xml">
+        <form string="Libro de Venta">
+          <group>
+            <field name="fecha"/>
+            <field name="numeros"/>
+            <field name="partner_id" string="Cliente"/>
+            <field name="serie"/>
+            <field name="tipo"/>
+            <field name="base" />
+            <field name="iva" />
+            <field name="total"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="librosat_libroventa_action_window">
+      <field name="name">Libro de Ventas</field>
+      <field name="res_model">libros.libros_sat</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- menu categories -->
+    <menuitem id="menu_librosat_libroventa" 
+              parent="account.menu_finance_entries_management" 
+              action= "librosat_libroventa_action_window"/>
+  </data>
+</odoo>

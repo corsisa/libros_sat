@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_libros_libros_sat_public,libros.libros_sat,model_libros_libros_sat,,1,1,1,1
