@@ -11,7 +11,10 @@ class libros_sat(models.Model):
         comodel_name='res.partner',
         ondelete='restrict',required=True,)
     serie = fields.Char(string='Serie', required=True)
-    tipo = fields.Selection([('1','Bienes'),('2','Servicios')])
+    tipo = fields.Selection([('1','Bienes'),('2','Servicios')],
+                    string='Tipo', default='1')
+    origen = fields.Selection([('n', 'Nacional'),('i','Importacion')], 
+                    string='Origen',default='n')
     base = fields.Float(string='Sub Total',)
     iva = fields.Float(string='IVA',)
     total = fields.Float(string='Total')

@@ -12,6 +12,7 @@
           <field name="partner_id" string="Cliente"/>
           <field name="serie"/>
           <field name="tipo"/>
+          <field name="origen"/>
           <field name="base"/>
           <field name="iva"/>
           <field name="total"/>
@@ -31,6 +32,7 @@
             <field name="partner_id" string="Cliente"/>
             <field name="serie"/>
             <field name="tipo"/>
+            <field name="origen"/>
             <field name="base" />
             <field name="iva" />
             <field name="total"/>
