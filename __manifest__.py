@@ -18,7 +18,7 @@
     # Check https://github.com/odoo/odoo/blob/12.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Localization',
-    'version': '1.0',
+    'version': '1.2',
 
     # any module necessary for this one to work correctly
     'depends': ['base','account'],
@@ -26,8 +26,7 @@
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/views_compras.xml',
-        'views/views_ventas.xml',
+        'views/views.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode
